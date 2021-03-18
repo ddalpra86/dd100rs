@@ -5,11 +5,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import io.quarkus.runtime.annotations.RegisterForReflection;
 
 @Entity
 @Cacheable
-@RegisterForReflection
 public class Legume extends PanacheEntity{
 
 	@Column(length = 40, unique = true)
