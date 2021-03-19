@@ -1,10 +1,6 @@
 package org.dalpra.acme.rest.json.resources;
 
-
-import java.util.Collections;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Set;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -25,9 +21,7 @@ import org.jboss.logging.Logger;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 
 import io.quarkus.panache.common.Sort;
-
 import org.dalpra.acme.rest.json.Fruit;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
@@ -66,7 +60,6 @@ public class FruitResource {
 		}catch(NullPointerException ex) {
 
 		}
-
 		fruit.persist();
 		return Response.ok(fruit).status(201).build();
 	}
